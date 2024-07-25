@@ -1,0 +1,54 @@
+#investors {
+    background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+    min-height: 120vh;
+  }
+  
+  model-viewer::part(default-progress-bar) {
+    display: none;
+  }
+  
+  .investors-container {
+    display: flex;
+    height: 100%;
+  }
+  
+  .investors-head {
+    display: flex;
+    flex-direction: column;
+    padding-left: 5vw;
+    gap: 10vw;
+  }
+  
+  .inv {
+    display: flex;
+    align-items: center;
+    width: 35vw;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  
+  .interactive-text {
+    cursor: pointer;
+    transition: color 0.3s;
+    margin-right: 20px;
+  }
+  
+  .interactive-text:hover {
+    color: #ffd700;
+  }
+  
+  .hover-text {
+    display: none;
+    color: #fff;
+    font-size: 16px;
+    text-align: left;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .hover-text.active {
+    display: flex;
+    flex-direction: column;
+    gap: 1.7vw;
+    opacity: 1;
+  }

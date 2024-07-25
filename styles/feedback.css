@@ -1,0 +1,131 @@
+.section#feedback {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+
+  }
+
+  .slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+    margin: 2rem auto;
+    overflow: hidden;
+    user-select: none;
+  }
+
+  .slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease-in-out;
+  }
+
+  .slide {
+    position: absolute;
+    width: 60%;
+    height: 80%;
+    left: 20%;
+    top: 10%;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    opacity: 0.7;
+    transition: all 0.5s ease-in-out;
+    cursor: grab;
+    transform: rotateY(180deg);
+  }
+
+  .slide:active {
+    cursor: grabbing;
+  }
+
+  .slide.active {
+    opacity: 1;
+    transform: rotateY(180deg) scale(1.1);
+    /* Keep the flip while scaling */
+    z-index: 2;
+  }
+
+  .slide-content {
+    transform: rotateY(180deg);
+    /* Flip the content back to normal */
+  }
+
+  .slide-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--primary-color);
+    box-shadow: 0 0 20px rgba(226, 60, 60, 0.5);
+    margin-bottom: 1rem;
+  }
+
+  .slide-name {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    margin-top: 1rem;
+  }
+
+  .slide-caption {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 0.5rem;
+    text-align: center;
+  }
+
+  .slider-nav {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .slider-nav-item {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .slider-nav-item.active {
+    background-color: var(--primary-color);
+  }
+
+  @media (max-width: 768px) {
+    .slide {
+      width: 80%;
+      left: 10%;
+    }
+
+    .slide-image {
+      width: 100px;
+      height: 100px;
+    }
+
+    .slide-name {
+      font-size: 1.2rem;
+    }
+
+    .slide-caption {
+      font-size: 0.9rem;
+    }
+  }

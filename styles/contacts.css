@@ -1,0 +1,50 @@
+#contacts {
+  background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+  padding: 1vw;
+  padding-bottom: 0.5vw;
+
+}
+
+.con {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 4vw;
+}
+
+.phone {
+  left: 0;
+  top: 0;
+  z-index: 99999;
+  height: 100%;
+  position: absolute;
+}
+
+.phone model-viewer {
+  height: 100%;
+}
+
+.con-content {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.con-content h4 {
+  margin-bottom: 1vw;
+  color: var(--primary-color);
+  text-shadow: 0 0 10px rgba(226, 60, 60, 0.5);
+}
+
+.con-content div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1vw;
+}
+
+
+.con-content svg {
+  height: 70px;
+  width: fit-content;
+}

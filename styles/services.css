@@ -1,0 +1,15 @@
+
+#unity-canvas {
+    border-radius: 200px;
+  
+  }
+  
+  #services {
+    min-height: 110vh;
+  }
+  
+  #services .content {
+    gap: 2vw;
+    display: flex;
+    flex-direction: column;
+  }  
